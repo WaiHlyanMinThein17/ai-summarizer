@@ -30,7 +30,7 @@ btn.addEventListener("click", async () => {
         status.textContent = "⟳ Summarizing...";
 
         // Call our FastAPI backend
-        const response = await fetch("http://127.0.0.1:8000/summarize", {
+        const response = await fetch("https://ai-summarizer-e6kv.onrender.com/summarize", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: pageText }),
