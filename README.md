@@ -12,3 +12,6 @@ One-click AI summarization of articles and emails using HuggingFace BART and Fas
 - Gmail thread support
 - FastAPI backend with average response time under 300ms
 - Clean terminal-aesthetic UI
+
+## API
+Backend: https://ai-summarizer-e6kv.onrender.com
