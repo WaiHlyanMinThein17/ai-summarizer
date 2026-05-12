@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Summarizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 380px;
+            min-height: 200px;
+            background: #0d0d0d;
+            color: #e8e8e8;
+            font-family: 'JetBrains Mono', monospace, sans-serif;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 13px;
+            color: #e95420;
+            letter-spacing: 0.05em;
+        }
+
+        .header span {
+            color: #555;
+            font-size: 11px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #e95420;
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #c44318;
+        }
+
+        button:disabled {
+            background: #333;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        #status {
+            font-size: 11px;
+            color: #555;
+            margin: 10px 0;
+            min-height: 16px;
+        }
+
+        #status.loading {
+            color: #4ade80;
+        }
+
+        #status.error {
+            color: #f87171;
+        }
+
+        #result {
+            display: none;
+            margin-top: 12px;
+            padding: 12px;
+            background: #161616;
+            border: 1px solid #222;
+            border-left: 3px solid #e95420;
+        }
+
+        #result p {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .footer {
+            margin-top: 14px;
+            font-size: 10px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>AI SUMMARIZER</h1>
+        <span>// bart-large-cnn</span>
+    </div>
+
+    <button id="summarizeBtn">⚡ Summarize This Page</button>
+    <div id="status"></div>
+    <div id="result">
+        <p id="summaryText"></p>
+    </div>
+    <div class="footer">powered by HuggingFace + FastAPI</div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
